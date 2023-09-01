@@ -2554,7 +2554,6 @@ impl BaseWebRTCSink {
                     .get(stream_name)
                     .and_then(|stream| stream.producer.clone())
                 {
-                    drop(state);
                     if let Err(err) =
                         session.connect_input_stream(element, &producer, webrtc_pad, &codecs)
                     {
@@ -2567,10 +2566,8 @@ impl BaseWebRTCSink {
                             err
                         );
                         remove = true;
-                        state = self.state.lock().unwrap();
                         break;
                     }
-                    state = self.state.lock().unwrap();
                 } else {
                     gst::error!(
                         CAT,
