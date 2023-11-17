@@ -51,8 +51,8 @@ reqwest = { version = "0.11", features = ["default-tls"] }
 parse_link_header = {version = "0.3", features = ["url"]}
 async-recursion = "1.0.0"
 
-livekit-protocol = { git = "https://github.com/livekit/rust-sdks", rev = "bfa62d758e01ec05f8b639fdce547d7b507ef84f" }
-livekit-api = { git = "https://github.com/livekit/rust-sdks", rev = "bfa62d758e01ec05f8b639fdce547d7b507ef84f", default-features = false, features = ["signal-client", "access-token", "native-tls"] }
+livekit-protocol = { git = "https://github.com/livekit/rust-sdks", rev = "b66d3b11db02f4b2e4be285dd4911edccf80920a" }
+livekit-api = { git = "https://github.com/livekit/rust-sdks", rev = "b66d3b11db02f4b2e4be285dd4911edccf80920a", default-features = false, features = ["signal-client", "access-token", "native-tls"] }
 
 [dev-dependencies]
 tracing = { version = "0.1", features = ["log"] }
